@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-public class Ejercicio {
+public class EjercicioAdivinanza {
 	
 	public static int INTENTOS = 5;
 	
@@ -19,7 +19,9 @@ public class Ejercicio {
 		if(contador==0){
 			System.out.println("Has ganado el numero "+numero_aleatorio);
 		}else if(contador >= INTENTOS){
-			System.out.println("GAME OVER PAQUETE!!!! el numero era "+numero_aleatorio);
+			System.out.println("GAME OVER PAQUETE!!!! el numero era "+numero_aleatorio+" fallos "+contador);
+		}else if(contador<INTENTOS){
+			System.out.println("Has ganado pero has tenido "+contador+" fallos");
 		}
 		//System.out.println("El numero ha adivinar es "+ numero_aleatorio);
 	}
@@ -28,9 +30,10 @@ public class Ejercicio {
 		int numero_introducido = 0;
 		int numero_aleatorio = (int) (100 * Math.random() + 1);
 		int contador = 0;
-		Ejercicio ejercicio = null;    
+		
+		EjercicioAdivinanza ejercicio = null;    
 			
-			ejercicio = new Ejercicio();
+			ejercicio = new EjercicioAdivinanza();
 		
 		do {
 			System.out.println("Adivina el numero");
