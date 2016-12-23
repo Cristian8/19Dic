@@ -28,7 +28,7 @@ public class Ejercicio {
 		int numero_introducido = 0;
 		int numero_aleatorio = (int) (100 * Math.random() + 1);
 		int contador = 0;
-		Ejercicio ejercicio = null;
+		Ejercicio ejercicio = null;    
 			
 			ejercicio = new Ejercicio();
 		
