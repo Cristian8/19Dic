@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class EjercicioAdivinanza {
 	
-	public static int INTENTOS = 5;
+	public static final int INTENTOS = 6;
 	
 	public static int pedirNumero() {
 		int numero_introducido = 0;
@@ -38,15 +38,16 @@ public class EjercicioAdivinanza {
 		do {
 			System.out.println("Adivina el numero");
 			numero_introducido = pedirNumero();
+			contador++;
 			if (numero_introducido == numero_aleatorio) {
 				System.out.println("Enhorabuena has acertado");
 				
 			} else if (numero_introducido < numero_aleatorio) {
-				System.out.println("El numero introducido es menor");
-				contador++;
+				System.out.println("El numero ha avidinar es mayor");
+				
 			} else if (numero_introducido > numero_aleatorio) {
-				System.out.println("El numero introducido es mayor");
-				contador++;
+				System.out.println("El numero ha adivinar es menor");
+				
 			}
 		} while ((numero_introducido != numero_aleatorio) && (contador<INTENTOS));
 		
